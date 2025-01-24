@@ -1,0 +1,136 @@
+/* Container for the projects section */
+.projects {
+  padding: 200px 50px;
+  text-align: center;
+  background: #f0f0f0;
+  animation: fadeIn 2s ease-out; /* Smooth fade-in animation */
+}
+
+/* Heading styling */
+.projects h2 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 30px;
+  animation: slideUp 1.5s ease-out;
+}
+
+/* Project list container */
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Individual project item styling */
+.project-item {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Adds depth to the 3D rotation effect */
+}
+
+.project-card {
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d; /* Enables 3D transformations */
+  transition: transform 0.6s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Hover effect for rotating the project card */
+.project-item:hover .project-card {
+  transform: rotateY(180deg);
+}
+
+/* Front of the card styling */
+.project-card > h3,
+.project-card > p,
+.project-card > ul {
+  transition: opacity 0.5s ease;
+}
+
+.project-card > h3,
+.project-card > p,
+.project-card > ul {
+  opacity: 1;
+}
+
+.project-item:hover .project-card > h3,
+.project-item:hover .project-card > p,
+.project-item:hover .project-card > ul {
+  opacity: 0;
+}
+
+/* Back of the card styling */
+.project-item:hover .project-card {
+  transform: rotateY(180deg);
+}
+
+.project-item .project-card > div {
+  transform: rotateY(180deg);
+}
+
+/* Styling for text inside the project cards */
+.project-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.project-card ul li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.project-card ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

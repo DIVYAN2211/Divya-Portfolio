@@ -1,0 +1,137 @@
+/* src/App.css */
+
+/* Set the background image for the entire app */
+
+
+body {
+  background: url(${backgroundImage}) no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Container for the whole app */
+.app {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.8); /* Adding a slight white overlay to make text more readable */
+  border-radius: 10px; /* Rounded corners for the app container */
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 250px;
+  background-color: #2c3e50;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 10px; /* Rounded top-left corner for navbar */
+  border-bottom-left-radius: 10px; /* Rounded bottom-left corner for navbar */
+}
+
+/* Profile image */
+.profile-image {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+/* Right content area */
+.right-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-top-right-radius: 10px; /* Rounded top-right corner for right-content */
+  border-bottom-right-radius: 10px; /* Rounded bottom-right corner for right-content */
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect for headings */
+}
+
+/* Links and Buttons */
+a, button {
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(93, 114, 137);
+  background-color: #f0f8ff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+a:hover, button:hover {
+  background-color: #0056b3;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .right-content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .navbar {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .right-content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}

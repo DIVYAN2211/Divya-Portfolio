@@ -1,0 +1,194 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  h2, h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    background-color:rgb(75, 116, 144);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color:rgb(64, 152, 211);
+    transform: scale(1.05);
+  }
+  
+  /* Skills Section */
+  .skills {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1500px;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .skills h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skills div {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Animation for Toggling Section */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+  }
+  
+  li.active {
+    opacity: 1;
+  }
+  
+  li:nth-child(odd) {
+    animation-delay: 0.3s;
+  }
+  
+  li:nth-child(even) {
+    animation-delay: 0.5s;
+  }
+  
+  /* Animation for Skill List Items */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  button {
+    margin-bottom: 1rem;
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .skills {
+      padding: 2rem 1rem;
+    }
+  
+    h2, h3 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  
+    li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* LeetCode Section with Animation */
+  .leetcode-section {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .leetcode-link {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(93, 114, 137);
+    background-color: #f0f8ff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leetcode-link:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Blinking Button for Experience */
+  .experience-btn {
+    background-color: #f39c12;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .experience-btn.clicked {
+    background-color: #e67e22;
+  }
+  
+  .experience-btn:hover {
+    background-color: #d35400;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Experience Details Section */
+  .experience-details {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+  }
+  

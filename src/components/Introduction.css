@@ -1,0 +1,95 @@
+/* Container for the entire introduction section */
+.introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 50px 10px;
+    animation: fadeIn 2s ease-out forwards; /* Ensure it takes effect */
+  }
+  
+  /* Container for the content */
+  .intro-content {
+    text-align: center;
+    max-width: 1000px;
+    animation: slideIn 1.5s ease-out forwards; /* Ensure the slide-in works */
+  }
+  
+  /* Profile image styling */
+  .profile-image {
+    border-radius: 100%; /* Fixing the value for perfect circle */
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    border: 4px solid rgb(88, 140, 165);
+    transition: transform 0.5s ease, border-color 0.3s ease;
+  }
+  
+  /* Profile image hover effect */
+  .profile-image:hover {
+    transform: scale(1.2);
+    border-color: rgb(71, 163, 255);
+  }
+  
+  /* Heading styling with animation */
+  h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeInUp 1.5s ease-out forwards; /* Ensure it fades in with animation */
+  }
+  
+  /* Animation for text content */
+  .intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    opacity: 0; /* Hidden initially for fadeIn animation */
+    animation: fadeInUp 2s ease-out forwards; /* Ensure text fades in */
+  }
+  
+  /* Animation for the entire section */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for the content slide-in */
+  @keyframes slideIn {
+    0% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for the heading text */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Delays for the paragraph text animations */
+  .intro-text:nth-child(odd) {
+    animation-delay: 1s; /* Delay for odd paragraphs */
+  }
+  
+  .intro-text:nth-child(even) {
+    animation-delay: 1.5s; /* Delay for even paragraphs */
+  }
+  

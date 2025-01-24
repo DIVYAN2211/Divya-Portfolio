@@ -1,0 +1,79 @@
+/* src/components/Navbar.css */
+
+/* Sticky Navbar */
+.navbar {
+    width: 100%;
+    background-color: #2c3e50;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensures the navbar stays on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+  }
+  
+  /* Container for the Navbar content */
+  .navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Styling for the Navbar Title */
+  .navbar-title h2 {
+    color: #ecf0f1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+    letter-spacing: 2px;
+    font-family: 'Roboto', sans-serif; /* Stylish Font */
+  }
+  
+  /* Highlighting Divya Nagaraj with a different color */
+  .navbar-title .highlight {
+    color:rgb(226, 234, 63); /* Highlight color */
+    font-family: 'Cursive', sans-serif; /* Stylish Font */
+  }
+  
+  /* Animation for the title */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Styling for Navbar Links */
+  .navbar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navbar-links li {
+    margin: 0 20px;
+  }
+  
+  .navbar-links li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #34495e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-links li a:hover {
+    background-color: #e74c3c;
+  }
+  
